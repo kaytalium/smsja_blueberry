@@ -1,0 +1,36 @@
+{
+  "name": "smsja_blueberry",
+  "version": "1.0.0",
+  "description": "A simple task manager app built with electron and firebase",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --debug",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "con": "concurrently \"npm run tsc:W\" \"npm run dev\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaytalium/smsja_blueberry.git"
+  },
+  "author": "Ovel K. Heslop",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kaytalium/smsja_blueberry/issues"
+  },
+  "homepage": "https://github.com/kaytalium/smsja_blueberry#readme",
+  "dependencies": {
+    "electron": "^1.6.8",
+    "electron-json-storage": "^3.0.5",
+    "electron-shortcut-normalizer": "^1.0.0",
+    "firebase": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/electron": "^1.4.38",
+    "@types/electron-json-storage": "0.0.19",
+    "@types/firebase": "^2.4.31",
+    "electron-packager": "^8.7.0",
+    "electron-winstaller": "^2.5.2"
+  }
+}
