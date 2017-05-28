@@ -8,7 +8,7 @@
     "dev": "electron . --debug",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
-    "con": "concurrently \"npm run tsc:W\" \"npm run dev\" "
+    "con": "concurrently \"npm run tsc:w\" \"npm run dev\" "
   },
   "repository": {
     "type": "git",

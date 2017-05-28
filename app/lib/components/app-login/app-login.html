@@ -1,0 +1,132 @@
+<template id="login">
+    <style>
+        .wrapper {
+            width: 500px;
+            /*border: 1px solid #000;*/
+            margin: auto auto;
+            height: 300px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        #login {
+            width: 100%;
+            min-height: 100%;
+            margin: auto auto;
+            background-size: cover;
+            border-radius: 3px 3px 0 0;
+            overflow: hidden;
+        }
+
+        #login .login-head {
+            height: 50px;
+            padding: 5px;
+            background: #34a4c4;
+            text-align: center;
+            color: #fff;
+        }
+
+        #login .login-head h1 {
+            font: 300 20px 'Raleway', serif;
+            line-height: 5px;
+        }
+
+        #login .login-head .tagline {
+            font: 200 14px 'Raleway', serif;
+            line-height: 0px;
+        }
+
+        #login .login-body {
+            padding: 40px 25px 20px;
+            min-height: 200px;
+            background: #f2f3f3;
+        }
+
+        input {
+            color: #3c4a50;
+            display: block;
+            float: left;
+            margin: 0 0 8px 5%;
+            line-height: 24px;
+            width: 90%;
+            height: calc(40px / 3);
+            padding: 15px 10px;
+            background: #fff;
+            border: none;
+            font: 400 15px 'Raleway', sans-serif;
+            border: 0;
+            border-radius: 3px;
+            font-weight: 300;
+            text-indent: 12px;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        input:focus,
+        .login-btn {
+            outline: 0;
+        }
+
+
+        .login-btn {
+            width: calc(90% / 3);
+            height: 35px;
+            border: 0;
+            border-radius: 3px;
+            color: #3c4a50;
+            padding: 5px;
+            font: 800 15px 'Raleway', sans-serif;
+            background: #34a4c4;
+            color: #fefefe;
+            margin: 15px 5%;
+            cursor: pointer;
+            -webkit-transition: all 1s ease-in-out;
+            -moz-transition: all 1s ease-in-out;
+            -ms-transition: all 1.5s ease-in-out;
+            -o-transition: all 1s ease-in-out;
+            transition: all 1s ease-in-out;
+        }
+
+        .login-btn:hover {
+            background: #2e3441;
+        }
+
+        .login-head h2 {
+            font: 400 35px 'Lora', sans-serif;
+            text-align: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+    <div class="wrapper">
+        <div id="login">
+            <div class="login-head">
+                <h1>BlueBerry Task Manager 1.0</h1>
+                <span class="tagline"> login to access the best task Manager in the world</span>
+
+            </div>
+            <div>
+
+                <form ng-submit='submit(form.user)' autocomplete="off" novalidate >
+                    <div class="login-body">
+                        <div class="form-group">
+                            <input type="text" placeholder="Username" name="un" autocomplete="off" ng-model="form.user.credit.username" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" placeholder="Password" name="pw" autocomplete="off" ng-model="form.user.credit.password" />
+                        </div>
+                        <button class="login-btn">Sign In</button>
+                </form>
+                </div>
+                </div>
+
+                <div ng-bind="mesg"></div>
+            </div>
+</template>
+<script>
+    require('./lib/components/app-login/app-login')
+
+</script>

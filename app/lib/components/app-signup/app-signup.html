@@ -1,0 +1,27 @@
+<!--Screen 1 when appication first start up and if no user is logged in.-->
+<template id="signup">
+<div>
+ <!--Creating the sign up form for this view-->
+                <form>
+                    <div class="login-body">
+                        <div class="form-group">
+                            <input type="text" placeholder="Sign in with Google" name="un" autocomplete="off" ng-model="form.user.credit.username" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" placeholder="Sign in with Facebook" name="pw" autocomplete="off" ng-model="form.user.credit.password"
+                            />
+                        </div>
+
+                        <p>We will never post on your behalf</p>
+
+                        <hr/>
+
+                        <button class="login-btn">Create new account</button> 
+                        <p>Already use BlueBerry Task Manager? Sign in </p>
+                </form>
+</div>
+
+</template>
+<script>
+    require('./lib/components/app-signup/app-signup')
+</script>

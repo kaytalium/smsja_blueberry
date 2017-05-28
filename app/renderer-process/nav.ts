@@ -1,5 +1,9 @@
-export module Nav{
+import { htmlImporter } from './htmlImporter'
 
+
+export module Nav{
+    
+    
     //check to see if user has logged in already 
     //if so then handle app view
     let userLoggedIn = userAppStatus()
@@ -26,8 +30,20 @@ export module Nav{
     function userAppStatus(){return false}
 
     function handleUserView(isLoggedIn: boolean = false) {
-        console.log('is this user logged in? ',isLoggedIn)
+        
+        if(!isLoggedIn){
+            htmlImporter.fileLoader('login')
+            
+            //after template is load to the dom we will now render to screen
+            document.querySelector('.bb-section').classList.add('is-shown')
+        }
+            
+
+        //console.log('is this user logged in? ',isLoggedIn)
+        
     }
+
+
 
     
 }
