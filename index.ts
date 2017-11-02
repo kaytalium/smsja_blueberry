@@ -10,7 +10,7 @@ if(handleSquirrelEvent(app)){
     //squirrel event handled and app will exit in 1000ms, so dont't do anything else
     return;
 }
-
+// set debug var
 const debug = /--debug/.test(process.argv[2])
 
 if(process.mas) app.setName('blueberry')
